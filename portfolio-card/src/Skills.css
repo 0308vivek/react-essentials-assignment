@@ -1,0 +1,24 @@
+.skills-container {
+  margin-top: 2rem;
+}
+
+.skills-container h3 {
+  color: #7b7e83;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-badge {
+  background-color: #eef2ff;
+  color: #1f2937;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}

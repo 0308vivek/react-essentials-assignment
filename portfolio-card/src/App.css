@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 550px;
+  padding: 2rem;
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  background: white;
+}
+
+.card-dark {
+  width: 550px;
+  padding: 2rem;
+  border: 1px solid whitesmoke;
+  box-shadow: 5px 5px 10px 0px rgb(128, 125, 125);
+  border-radius: 16px;
+  background: black;
+  color: white;
+}
+
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.theme-btn,
+.arrow-btn,
+.like-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.theme-btn,
+.like-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.photo-count {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.like-btn {
+  color: black;
+}
+
+.like-btn.liked {
+  color: red;
+}
+
+.card-dark .theme-btn,
+.card-dark .arrow-btn,
+.card-dark .like-btn,
+.card-dark .photo-count {
+  color: white;
+}

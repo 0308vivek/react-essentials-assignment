@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profile-container {
+
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.profile-description{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-container h3{
+    margin-top: 10px;
+    color: #7B7E83;
+}
