@@ -35,7 +35,7 @@ A React-based movie database application focused on search functionality, dynami
 * Dedicated Favourite Movies section
 * State-driven UI updates
 
-**Live Demo:** (Add Render Deployment Link)
+**Live Demo:** https://movie-database-mi56.onrender.com
 
 ---
 
