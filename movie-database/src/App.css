@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* LIGHT THEME */
+
+.theme-light {
+  min-height: 100vh;
+  background-color: #f6f3de;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+/* DARK THEME */
+
+.theme-dark {
+  min-height: 100vh;
+  background-color: #111827;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* THEME TOGGLE BUTTON */
+
+.theme-toggle {
+  margin: auto;
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+/* Light Mode Button */
+
+.theme-light .theme-toggle {
+  background-color: #111827;
+  color: white;
+}
+
+.theme-light .theme-toggle:hover {
+  background-color: #1f2937;
+  transform: translateY(-2px);
+}
+
+/* Dark Mode Button */
+
+.theme-dark .theme-toggle {
+  background-color: white;
+  color: #111827;
+}
+
+.theme-dark .theme-toggle:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+/* Icon Styling */
+
+.theme-toggle svg {
+  font-size: 1.2rem;
+}
+
+
+.theme-light,
+.theme-dark,
+.theme-toggle {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}

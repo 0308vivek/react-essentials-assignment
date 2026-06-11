@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.bollywood-movies {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.bollywood-movies h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #c4bb61;
+  font-size: 2.5rem;
+}
+
+/* Loading Section */
+
+.loading-spinner {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Movie Grid */
+
+.movie-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Movie Card */
+
+.movie-card {
+  width: 300px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.movie-title {
+  margin: 15px;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.movie-year {
+  margin: 0 15px 8px;
+  color: #666;
+}
+
+.movie-genre {
+  margin: 0 15px 15px;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+/* Favourite Button */
+
+.movie-card button {
+  width: calc(100% - 30px);
+  margin: 0 15px 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ef4444;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.movie-card button:hover {
+  background-color: #dc2626;
+}
+
+/* Loading Toggle Button */
+
+.bollywood-movies > button {
+  display: block;
+  margin: 40px auto 0;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bollywood-movies > button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Search Section */
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.2);
+}
+
+.search-results {
+  margin-top: 12px;
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.clear-filters {
+  display: block;
+  margin: 15px auto;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ef4444;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clear-filters:hover {
+  background-color: #dc2626;
+}
+
+.favourite-section {
+  width: 180px;
+  min-height: 200px;
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.favourite-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.favourite-section p {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #739aea;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.favourite-section p:last-child {
+  margin-bottom: 0;
+}
