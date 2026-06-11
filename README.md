@@ -67,9 +67,3 @@ A React-based movie database application focused on search functionality, dynami
 These projects were built while learning React and applying core frontend development concepts through hands-on practice. Each project focuses on different React fundamentals and demonstrates practical implementation of reusable components, state-driven UI updates, and interactive user experiences.
 
 More projects will be added as part of my React learning journey.
-
-## Author
-
-**Vivek Prasad**
-
-Aspiring Full Stack & Cyber Security Engineer currently learning React and modern web development.
