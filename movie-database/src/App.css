@@ -73,7 +73,6 @@
   font-size: 1.2rem;
 }
 
-
 .theme-light,
 .theme-dark,
 .theme-toggle {
@@ -81,4 +80,12 @@
     background-color 0.3s ease,
     color 0.3s ease,
     transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 90%;
+    max-width: 250px;
+    justify-content: center;
+  }
 }

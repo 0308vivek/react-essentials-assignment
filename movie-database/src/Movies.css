@@ -7,7 +7,6 @@
 body {
   background-color: #f5f5f5;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 
 .bollywood-movies {
@@ -23,30 +22,17 @@ body {
   font-size: 2.5rem;
 }
 
-/* Loading Section */
-
-.loading-spinner {
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loading-spinner p {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* Movie Grid */
+/* MOVIE GRID */
 
 .movie-grid {
   display: flex;
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
-/* Movie Card */
+/* MOVIE CARD */
 
 .movie-card {
   width: 300px;
@@ -85,7 +71,7 @@ body {
   font-weight: 600;
 }
 
-/* Favourite Button */
+/* FAVOURITE BUTTON */
 
 .movie-card button {
   width: calc(100% - 30px);
@@ -104,32 +90,13 @@ body {
   background-color: #dc2626;
 }
 
-/* Loading Toggle Button */
-
-.bollywood-movies > button {
-  display: block;
-  margin: 40px auto 0;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  background-color: #2563eb;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.bollywood-movies > button:hover {
-  background-color: #1d4ed8;
-}
-
-/* Search Section */
+/* SEARCH */
 
 .search-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 
 .search-input {
@@ -155,15 +122,16 @@ body {
   font-weight: 500;
 }
 
+/* CLEAR SEARCH BUTTON */
+
 .clear-filters {
   display: block;
   margin: 15px auto;
-  padding: 8px 16px;
+  padding: 10px 18px;
   border: none;
   border-radius: 8px;
   background-color: #ef4444;
   color: white;
-  font-size: 1rem;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -172,9 +140,23 @@ body {
   background-color: #dc2626;
 }
 
+/* EMPTY STATE */
+
+.empty-state {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.empty-state h3 {
+  color: #666;
+}
+
+/* FAVOURITES SECTION */
+
 .favourite-section {
-  width: 180px;
-  min-height: 200px;
+  max-width: 1000px;
+  margin: 40px auto 0;
   background: white;
   border-radius: 15px;
   padding: 20px;
@@ -187,14 +169,79 @@ body {
   color: #222;
 }
 
-.favourite-section p {
-  margin-bottom: 10px;
-  padding: 10px;
+.favourite-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.favourite-list p {
+  padding: 10px 15px;
   background-color: #739aea;
   border-radius: 8px;
+  color: white;
   font-weight: 500;
 }
 
-.favourite-section p:last-child {
-  margin-bottom: 0;
+.empty-favourites {
+  text-align: center;
+  color: #666;
+}
+
+/* DARK MODE */
+
+.theme-dark .movie-card {
+  background-color: #1f2937;
+}
+
+.theme-dark .movie-title {
+  color: white;
+}
+
+.theme-dark .movie-year {
+  color: #d1d5db;
+}
+
+.theme-dark .favourite-section {
+  background-color: #1f2937;
+}
+
+.theme-dark .favourite-section h2 {
+  color: white;
+}
+
+.theme-dark .empty-favourites {
+  color: #d1d5db;
+}
+
+.theme-dark .search-input {
+  background-color: #1f2937;
+  color: white;
+  border-color: #374151;
+}
+
+.theme-dark .search-results {
+  color: #d1d5db;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .movie-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .favourite-section {
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .bollywood-movies h1 {
+    font-size: 2rem;
+  }
 }

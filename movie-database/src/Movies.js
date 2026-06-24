@@ -26,9 +26,6 @@ function Movies() {
     },
   ];
 
-  const [loading, setLoading] = useState(false);
-  const [selectedGenre, setSelectedGenre] = useState("All");
-  const [movies, setMovies] = useState(moviesList);
   const [searchTerm, setSearchTerm] = useState("");
   const [favouriteMovie, setFavouriteMovie] = useState([]);
 
@@ -54,76 +51,74 @@ function Movies() {
     <div className="bollywood-movies">
       <h1>Movie Explorer</h1>
 
-      {loading ? (
-        <div className="loading-spinner">
-          <p>Loading Bollywood Movies</p>
-        </div>
-      ) : (
-        <div className="main-container">
-          <div className="search-section">
-            <input
-              type="text"
-              placeholder="Search Movies..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="search-input"
-            />
-            {searchTerm && (
-              <p className="search-results">
-                Founded {filteredMovies.length} movie
-                {filteredMovies.length !== 1 ? "s" : ""} for "{searchTerm}"
-              </p>
-            )}
-          </div>
+      <div className="main-container">
+        <div className="search-section">
+          <input
+            type="text"
+            placeholder="Search Movies..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-input"
+          />
 
           {searchTerm && (
-            <button
-              className="clear-filters"
-              onClick={() => {
-                setSearchTerm("");
-              }}
-            >
-              X
-            </button>
+            <p className="search-results">
+              Found {filteredMovies.length} movie
+              {filteredMovies.length !== 1 ? "s" : ""} for "{searchTerm}"
+            </p>
           )}
-
-          <div className="movie-grid">
-            {filteredMovies.length > 0 ? (
-              filteredMovies.map((movie) => (
-                <div className="movie-card" key={movie.id}>
-                  <img src={movie.image} alt="Image"></img>
-                  <h3 className="movie-title">{movie.title}</h3>
-                  <p className="movie-year">{movie.year}</p>
-                  <p className="movie-genre">{movie.genre}</p>
-                  <button onClick={() => handleFav(movie.title)}>
-                    {favouriteMovie.includes(movie.title)
-                      ? "Unfavourite"
-                      : "Favourite"}
-                  </button>
-                </div>
-              ))
-            ) : (
-              <div className="empty-state">
-                <h3>No Movies Found ! Try adjusting the search</h3>
-              </div>
-            )}
-
-            <div className="favourite-section">
-              <h2>Favourite Movies</h2>
-
-              {favouriteMovie.length === 0 ? (
-                <p>No favourite movies yet.</p>
-              ) : (
-                favouriteMovie.map((movie) => (
-                  <p key={movie} className="empty-favourites">
-                    {movie}
-                  </p>
-                ))
-              )}
-            </div>
-          </div>
         </div>
-      )}
+
+        {searchTerm && (
+          <button className="clear-filters" onClick={() => setSearchTerm("")}>
+            Clear Search
+          </button>
+        )}
+
+        {/* MOVIES */}
+
+        <div className="movie-grid">
+          {filteredMovies.length === 0 ? (
+            <div className="empty-state">
+              <h3>No Movies Found</h3>
+            </div>
+          ) : (
+            filteredMovies.map((movie) => (
+              <div className="movie-card" key={movie.id}>
+                <img src={movie.image} alt={movie.title} />
+
+                <h3 className="movie-title">{movie.title}</h3>
+
+                <p className="movie-year">{movie.year}</p>
+
+                <p className="movie-genre">{movie.genre}</p>
+
+                <button onClick={() => handleFav(movie.title)}>
+                  {favouriteMovie.includes(movie.title)
+                    ? "Unfavourite"
+                    : "Favourite"}
+                </button>
+              </div>
+            ))
+          )}
+        </div>
+
+        {/* FAVOURITES */}
+
+        <div className="favourite-section">
+          <h2>Favourite Movies</h2>
+
+          {favouriteMovie.length === 0 ? (
+            <p className="empty-favourites">No favourite movies yet.</p>
+          ) : (
+            <div className="favourite-list">
+              {favouriteMovie.map((movie) => (
+                <p key={movie}>{movie}</p>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
