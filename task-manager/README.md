@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# React Essentials Assignment - Task Manager Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project was built as part of my React learning journey. The goal was to understand advanced React state management techniques by building a Task Manager Application using React Context API and useReducer. The application demonstrates how to manage global state efficiently while maintaining a scalable and organized component structure.
 
-In the project directory, you can run:
+## Live Demo
 
-### `npm start`
+**Deployment Link:** https://your-task-manager-link.onrender.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### A1: Global State Management with Context API
 
-### `npm test`
+* Created a dedicated Task Context for managing application state.
+* Wrapped the application with a Context Provider.
+* Enabled global access to task data without prop drilling.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### A2: State Management Using useReducer
 
-### `npm run build`
+Implemented task management functionality using the useReducer hook.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Supported actions include:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Add Task
+* Edit Task
+* Delete Task
+* Toggle Task Completion
+* Clear All Tasks
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### A3: Component-Based Architecture
 
-### `npm run eject`
+Structured the application into reusable React components:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* TaskInput
+* TaskList
+* TaskItem
+* TaskSummary
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Each component is responsible for a specific part of the application, improving maintainability and scalability.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### A4: Interactive Task Management
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Create new tasks dynamically.
+* Edit existing task names.
+* Mark tasks as complete or incomplete using checkboxes.
+* Delete individual tasks.
+* Clear all tasks with a single action.
 
-## Learn More
+### A5: Responsive and Modern UI
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Clean card-based layout.
+* Hover effects and smooth transitions.
+* Visual indication for completed tasks.
+* Responsive design for desktop, tablet, and mobile devices.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies Used
 
-### Code Splitting
+* React.js
+* JavaScript (ES6+)
+* JSX
+* CSS3
+* React Hooks (`useReducer`)
+* React Context API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Learning Outcomes
 
-### Analyzing the Bundle Size
+Through this project, I gained hands-on experience with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* React Context API
+* useReducer Hook
+* Global State Management
+* Reducer Pattern
+* Component-Based Architecture
+* State Updates and Action Dispatching
+* Conditional Rendering
+* Event Handling
+* Responsive UI Design
+* Modern CSS Styling
 
-### Making a Progressive Web App
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+task-manager/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── TaskInput.js
+│   │   ├── TaskList.js
+│   │   ├── TaskItem.js
+│   │   └── TaskSummary.js
+│   │
+│   ├── context/
+│   │   └── TaskContext.js
+│   │
+│   ├── reducer/
+│   │   └── taskReducer.js
+│   │
+│   ├── styles/
+│   │   └── taskManager.css
+│   │
+│   ├── App.js
+│   └── index.js
+│
+├── package.json
+└── README.md
+```
