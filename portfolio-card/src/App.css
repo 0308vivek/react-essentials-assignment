@@ -9,27 +9,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
+/* CARD */
+
 .card {
-  width: 550px;
+  width: 90%;
+  max-width: 550px;
   padding: 2rem;
   border: 1px solid black;
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
   border-radius: 16px;
   background: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .card-dark {
-  width: 550px;
+  width: 90%;
+  max-width: 550px;
   padding: 2rem;
   border: 1px solid whitesmoke;
-  box-shadow: 5px 5px 10px 0px rgb(128, 125, 125);
   border-radius: 16px;
   background: black;
   color: white;
+  box-shadow: 5px 5px 10px rgb(128, 125, 125);
 }
 
+/* ACTION BUTTONS */
 
 .actions {
   display: flex;
@@ -54,6 +60,10 @@
   gap: 8px;
 }
 
+.arrow-btn {
+  font-size: 1.5rem;
+}
+
 .contact-btn {
   display: flex;
   align-items: center;
@@ -68,10 +78,16 @@
   font-size: 1rem;
 }
 
+.contact-btn:hover {
+  opacity: 0.9;
+}
+
 .photo-count {
   font-size: 1.1rem;
   color: #555;
 }
+
+/* LIKE BUTTON */
 
 .like-btn {
   color: black;
@@ -81,9 +97,49 @@
   color: red;
 }
 
+/* DARK MODE */
+
 .card-dark .theme-btn,
 .card-dark .arrow-btn,
 .card-dark .like-btn,
 .card-dark .photo-count {
   color: white;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+  .card,
+  .card-dark {
+    padding: 1.5rem;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-description {
+    padding: 1rem 0;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.card-dark .skill-badge {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.card-dark .skills-container h3 {
+  color: #b0b0b0;
 }

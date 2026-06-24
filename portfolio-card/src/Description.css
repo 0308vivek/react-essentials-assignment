@@ -1,8 +1,23 @@
 .description-container {
   margin-top: 20px;
-  line-height: 30px;
+  line-height: 1.8;
 }
 
 .description-container h3 {
   font-weight: 450;
+  color: inherit;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+  .description-container {
+    text-align: center;
+    margin-top: 15px;
+    line-height: 1.6;
+  }
+
+  .description-container h3 {
+    font-size: 1rem;
+  }
 }

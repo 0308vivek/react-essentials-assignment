@@ -22,29 +22,51 @@ function App() {
     "Cyber Security",
   ];
 
-  const photos = [
-    "./photo.jpg",
-    "./image2.avif",
-    "./image3.avif",
-    "./image4.jpg",
+  const profiles = [
+    {
+      image: "./photo.jpg",
+      name: "Vivek Prasad",
+      title: "Full Stack & Cyber Security Engineer",
+      bio: "I design and develop secure, high-performance web applications from front-end interfaces to back-end systems.",
+      skills: ["React", "JavaScript", "Node.js", "Express"],
+    },
+
+    {
+      image: "./image2.avif",
+      name: "Tony Stark",
+      title: "Software Engineer",
+      bio: "Passionate about building scalable software and solving complex engineering challenges.",
+      skills: ["React", "TypeScript", "AWS", "Docker"],
+    },
+
+    {
+      image: "./image3.avif",
+      name: "Bruce Wayne",
+      title: "Cyber Security Analyst",
+      bio: "Focused on application security, penetration testing, and infrastructure protection.",
+      skills: ["Security", "Linux", "Networking", "Python"],
+    },
+
+    {
+      image: "./image4.jpg",
+      name: "Peter Parker",
+      title: "Frontend Developer",
+      bio: "Creating modern, responsive, and user-friendly web experiences.",
+      skills: ["React", "CSS", "JavaScript", "Figma"],
+    },
   ];
 
   const [likeCount, setLikeCount] = useState(0);
   const [liked, setLiked] = useState(false);
   const [theme, setTheme] = useState(false);
-  const [images, setImages] = useState(0);
+  const [currentProfile, setCurrentProfile] = useState(0);
 
   const handleImagesIncre = () => {
-    if (images < photos.length - 1) {
-      setImages(images + 1);
-
-    }
+    setCurrentProfile((currentProfile + 1) % profiles.length);
   };
 
   const handleImagesDecre = () => {
-    if (images > 0) {
-      setImages(images - 1);
-    }
+    setCurrentProfile((currentProfile - 1 + profiles.length) % profiles.length);
   };
 
   const handleLike = () => {
@@ -63,9 +85,15 @@ function App() {
   return (
     <div className="main-container">
       <div className={theme ? "card-dark" : "card"}>
-        <Profile image={photos[images]} />
-        <Description />
-        <Skills skills={skills} />
+        <Profile
+          image={profiles[currentProfile].image}
+          name={profiles[currentProfile].name}
+          title={profiles[currentProfile].title}
+        />
+
+        <Description bio={profiles[currentProfile].bio} />
+
+        <Skills skills={profiles[currentProfile].skills} />
         <div className="actions">
           <button className="theme-btn" onClick={handleThemeChange}>
             {theme ? <MdOutlineLightMode /> : <FiMoon />}
@@ -80,7 +108,9 @@ function App() {
             <FiChevronRight />
           </button>
 
-          <span className="photo-count">{images+1}/4</span>
+          <span className="photo-count">
+            {currentProfile + 1} / {profiles.length}
+          </span>
 
           <button
             className={liked ? "like-btn liked" : "like-btn"}
