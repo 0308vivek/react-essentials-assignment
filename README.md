@@ -39,13 +39,35 @@ A React-based movie database application focused on search functionality, dynami
 
 ---
 
+### 3. Task Manager Application
+
+A Task Manager application built using React Context API and useReducer for centralized state management. The application allows users to create, edit, delete, and manage tasks while demonstrating scalable React architecture and global state management.
+
+#### Features
+
+* Add new tasks
+* Edit existing tasks
+* Delete tasks
+* Mark tasks as complete/incomplete
+* Clear all tasks
+* Global state management using Context API
+* State updates handled with useReducer
+* Responsive design
+* Smooth animations and transitions
+* Modern task management UI
+
+**Live Demo:** https://your-task-manager-link.onrender.com/
+
+---
+
 ## Technologies Used
 
 * React.js
 * JavaScript (ES6+)
 * JSX
 * CSS3
-* React Hooks (`useState`)
+* React Hooks (`useState`, `useReducer`)
+* React Context API
 * React Icons
 
 ## React Concepts Practiced
@@ -61,7 +83,10 @@ A React-based movie database application focused on search functionality, dynami
 * Controlled Components
 * List Rendering with `.map()`
 * UI State Management
-
+* Context API
+* useReducer
+* Global State Management
+* Reducer Pattern
 ## Learning Journey
 
 These projects were built while learning React and applying core frontend development concepts through hands-on practice. Each project focuses on different React fundamentals and demonstrates practical implementation of reusable components, state-driven UI updates, and interactive user experiences.
