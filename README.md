@@ -77,7 +77,7 @@ A responsive weather application built using React that demonstrates API integra
 * Controlled components using React state
 * Side-effect management with React Hooks
 
-**Live Demo:** https://your-weather-dashboard-link.onrender.com/
+**Live Demo:** https://weather-dashboard-49ht.onrender.com
 
 ---
 
