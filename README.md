@@ -1,6 +1,8 @@
 # React Essentials Assignment
 
-This repository contains projects built while learning React fundamentals, including component-based architecture, props, state management, event handling, conditional rendering, filtering logic, and modern UI development.
+This repository contains projects built while learning React fundamentals, covering component-based architecture, state management, hooks, API integration, Context API, reducers, and modern UI development. Each project focuses on applying core React concepts through practical, hands-on applications.
+
+---
 
 ## Projects
 
@@ -35,13 +37,13 @@ A React-based movie database application focused on search functionality, dynami
 * Dedicated Favourite Movies section
 * State-driven UI updates
 
-**Live Demo:** https://movie-database-mi56.onrender.com
+**Live Demo:** https://movie-database-mi56.onrender.com/
 
 ---
 
 ### 3. Task Manager Application
 
-A Task Manager application built using React Context API and useReducer for centralized state management. The application allows users to create, edit, delete, and manage tasks while demonstrating scalable React architecture and global state management.
+A Task Manager application built using React Context API and `useReducer` for centralized state management. The application allows users to create, edit, delete, and manage tasks while demonstrating scalable React architecture.
 
 #### Features
 
@@ -51,12 +53,32 @@ A Task Manager application built using React Context API and useReducer for cent
 * Mark tasks as complete/incomplete
 * Clear all tasks
 * Global state management using Context API
-* State updates handled with useReducer
+* State updates handled with `useReducer`
 * Responsive design
 * Smooth animations and transitions
 * Modern task management UI
 
-**Live Demo:** https://task-manager-vy9r.onrender.com
+**Live Demo:** https://task-manager-vy9r.onrender.com/
+
+---
+
+### 4. Weather Dashboard
+
+A responsive weather application built using React that demonstrates API integration and side-effect management with the `useEffect` hook. The application fetches real-time weather information based on user input and displays it with a clean, modern interface.
+
+#### Features
+
+* Search weather by city
+* Live weather data using OpenWeatherMap API
+* API fetching with `useEffect`
+* Loading and error state handling
+* Temperature, humidity, wind speed, and weather condition display
+* Responsive and modern UI
+* Controlled components using React state
+* Side-effect management with React Hooks
+
+**Live Demo:** https://your-weather-dashboard-link.onrender.com/
+
 ---
 
 ## Technologies Used
@@ -65,9 +87,13 @@ A Task Manager application built using React Context API and useReducer for cent
 * JavaScript (ES6+)
 * JSX
 * CSS3
-* React Hooks (`useState`, `useReducer`)
+* Fetch API
+* React Hooks (`useState`, `useEffect`, `useReducer`)
 * React Context API
 * React Icons
+* OpenWeatherMap API
+
+---
 
 ## React Concepts Practiced
 
@@ -76,18 +102,23 @@ A Task Manager application built using React Context API and useReducer for cent
 * Props
 * State Management
 * Event Handling
+* Controlled Components
 * Conditional Rendering
 * Dynamic Rendering
 * Search & Filtering Logic
-* Controlled Components
 * List Rendering with `.map()`
-* UI State Management
+* API Fetching
+* Side Effects with `useEffect`
+* Loading & Error Handling
 * Context API
-* useReducer
+* `useReducer`
 * Global State Management
 * Reducer Pattern
+
+---
+
 ## Learning Journey
 
-These projects were built while learning React and applying core frontend development concepts through hands-on practice. Each project focuses on different React fundamentals and demonstrates practical implementation of reusable components, state-driven UI updates, and interactive user experiences.
+These projects were built while learning React and progressively applying core frontend development concepts. Each project introduces new React features and best practices, from component composition and state management to Context API, reducers, and asynchronous API integration.
 
-More projects will be added as part of my React learning journey.
+More projects will continue to be added as I expand my React knowledge and build more advanced frontend applications.
