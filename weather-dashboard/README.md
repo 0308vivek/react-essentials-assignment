@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# React Essentials Assignment - Weather Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project was built as part of my React learning journey. The goal was to understand how to manage side effects in React using the `useEffect` hook by building a Weather Dashboard application. The application fetches real-time weather data from the OpenWeatherMap API and dynamically updates the user interface based on user input while demonstrating asynchronous data fetching, loading states, and error handling.
 
-In the project directory, you can run:
+## Live Demo
 
-### `npm start`
+**Deployment Link:** https://your-weather-dashboard-link.onrender.com
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### A1: API Integration with useEffect
 
-### `npm test`
+* Fetched real-time weather data from the OpenWeatherMap API.
+* Used the `useEffect` hook to trigger API requests when the selected city changes.
+* Managed asynchronous data fetching using the Fetch API.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### A2: State Management with React Hooks
 
-### `npm run build`
+Implemented application state using the `useState` hook.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Managed the following states:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Current City
+* Selected Search City
+* Weather Data
+* Loading State
+* Error State
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### A3: Component-Based Architecture
 
-### `npm run eject`
+Structured the application into reusable React components:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* SearchBar
+* WeatherCard
+* Loader
+* Error
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Each component is responsible for a specific part of the application, making the code modular, reusable, and easy to maintain.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### A4: Dynamic Weather Information
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Search weather by city name.
+* Display current temperature.
+* Show weather condition.
+* Display humidity level.
+* Display wind speed.
+* Automatically update weather information for the searched city.
 
-## Learn More
+### A5: Loading & Error Handling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Display a loading indicator while fetching weather data.
+* Show user-friendly error messages for invalid city names.
+* Prevent application crashes by handling API errors gracefully.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### A6: Responsive and Modern UI
 
-### Code Splitting
+* Modern card-based interface.
+* Responsive layout for desktop, tablet, and mobile devices.
+* Gradient background with clean typography.
+* Smooth hover effects and transitions.
+* Weather information displayed in an easy-to-read format.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Technologies Used
 
-### Analyzing the Bundle Size
+* React.js
+* JavaScript (ES6+)
+* JSX
+* CSS3
+* Fetch API
+* React Hooks (`useState`, `useEffect`)
+* OpenWeatherMap API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Learning Outcomes
 
-### Making a Progressive Web App
+Through this project, I gained hands-on experience with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* React `useEffect` Hook
+* API Integration
+* Asynchronous Data Fetching
+* Side Effect Management
+* React State Management with `useState`
+* Controlled Components
+* Loading and Error Handling
+* Component-Based Architecture
+* Conditional Rendering
+* Responsive UI Design
+* Modern CSS Styling
 
-### Advanced Configuration
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+weather-dashboard/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── SearchBar.jsx
+│   │   ├── WeatherCard.jsx
+│   │   ├── Loader.jsx
+│   │   └── Error.jsx
+│   │
+│   ├── App.css
+│   ├── App.js
+│   ├── index.css
+│   └── index.js
+│
+├── package.json
+└── README.md
+```
